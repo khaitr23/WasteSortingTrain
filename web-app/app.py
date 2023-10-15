@@ -13,6 +13,11 @@ model = ResNet()
 model.load_state_dict(torch.load('resnet_weights.pth'))
 model.eval()
 dataset_classes = ['cardboard', 'glass', 'metal', 'paper', 'plastic', 'trash']
+trash_group_dict = {
+    "Compost" : [""],
+    "Recycling":["cardboard", "glass", "metal", "paper", "plastic"],
+    "Landfill" : ["trash", "cardboard"]
+}
 
 def classify_frame(frame):
     frame = cv2.resize(frame, (256, 256))
@@ -23,7 +28,13 @@ def classify_frame(frame):
         prediction = model(preprocessed_frame)
         predicted_class = torch.argmax(prediction, dim=1).item()
 
-    return dataset_classes[predicted_class]
+    trash_type = dataset_classes[predicted_class]
+    trash_group = ""
+    for category, labels in trash_group_dict.items():
+        if trash_type in labels:
+            trash_group = category
+
+    return "Item type is " + trash_type + ", put in: " + trash_group
 
 @app.route('/')
 def index():
@@ -33,7 +44,7 @@ def gen():
     camera = cv2.VideoCapture(0)
     while True:
         ret, frame = camera.read()
-        classification_result = "Item type: " + classify_frame(frame)
+        classification_result = classify_frame(frame)
         frame = cv2.putText(frame, classification_result, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
         _, jpeg = cv2.imencode('.jpg', frame)
         yield (b'--frame\r\n'
