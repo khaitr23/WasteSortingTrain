@@ -17,10 +17,6 @@ camera = cv2.VideoCapture(0)
 
 while True:
     ret, frame = camera.read()
-
-    # Preprocess the frame
-    # You may need to adjust the preprocessing to match the requirements of your custom ResNet model
-    # Ensure the input size and preprocessing are consistent with your trained model
     
     frame = cv2.resize(frame, (256, 256))
     frame_tensor = transforms.ToTensor()(frame)
