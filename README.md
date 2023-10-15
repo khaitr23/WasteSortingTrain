@@ -64,4 +64,4 @@ The application should be accessible at http://localhost:8000 in your web browse
 to be added
 
 ## Dataset
-[https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification] Garbage Classification by CCHANGCS 
+[https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification] (Garbage Classification by CCHANGCS)
