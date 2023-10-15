@@ -29,8 +29,6 @@ Waste sorting is an essential part of environmental conservation and recycling. 
 - [Flask](https://flask.palletsprojects.com/) for web application development
 - [OpenCV](https://opencv.org/) for computer vision and camera access
 - [PyTorch](https://pytorch.org/) for deep learning model integration
-- [HTML/CSS/JavaScript](https://developer.mozilla.org/en-US/docs/Web) for the front-end interface
-- [YOLOv5](https://github.com/ultralytics/yolov5) for object detection (optional)
 
 ## Setup
 
