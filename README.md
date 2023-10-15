@@ -62,7 +62,7 @@ The application should be accessible at http://localhost:8000 in your web browse
 - Place the item in the appropriate bin based on the classification.
 
 ## Demo
-to be added
+[Watch here](https://youtu.be/Alx6yoTuk7A)
 
 ## Dataset
 [Kaggle: Garbage Classification by CCHANGCS](https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification)
