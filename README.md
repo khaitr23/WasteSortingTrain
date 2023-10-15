@@ -28,7 +28,8 @@ Waste sorting is an essential part of environmental conservation and recycling. 
 - [Python](https://www.python.org/) for server-side logic
 - [Flask](https://flask.palletsprojects.com/) for web application development
 - [OpenCV](https://opencv.org/) for computer vision and camera access
-- [PyTorch](https://pytorch.org/) for deep learning model integration
+- [Jupyter Notebook](https://jupyter.org/) for deep learning model training
+- [PyTorch](https://pytorch.org/) for deep learning model training and integration
 
 ## Setup
 
@@ -64,4 +65,4 @@ The application should be accessible at http://localhost:8000 in your web browse
 to be added
 
 ## Dataset
-Garbage Classification by CCHANGCS: [https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification]
+[Kaggle: Garbage Classification by CCHANGCS](https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification)
